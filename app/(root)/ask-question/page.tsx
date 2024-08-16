@@ -3,7 +3,7 @@ import React from 'react';
 const AskQuesiton = () => {
   return (
     <div>
-      ask questi  on
+      ask question
     </div>
   );
 }

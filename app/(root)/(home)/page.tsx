@@ -1,11 +1,13 @@
-import React from 'react';
+import { ModeToggle } from "@/components/mode-toggle";
+import { UserButton } from "@clerk/nextjs";
+import React from "react";
 
 const Home = () => {
   return (
     <div>
-      <h1 className="h1-bold ">sayema</h1>
+  home page
     </div>
   );
-}
+};
 
 export default Home;

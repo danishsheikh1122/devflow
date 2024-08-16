@@ -9,3 +9,11 @@
 ## Initializing Clerk Authentication
 
 - added full authentication
+
+## Created nav bar
+
+- added dark mode + userButton and menu on small screen
+
+## Created SideNavBar
+
+- used sheet from shadcn-ui most use ful cmp and added navigations in sheet

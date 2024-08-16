@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Space_Grotesk } from "next/font/google";
 import "./globals.css";
+
 import { ClerkProvider } from "@clerk/nextjs";
 const inter = Inter({
   subsets: ["latin"],
@@ -12,7 +13,7 @@ const spaceGrotesk = Space_Grotesk({
   weight: ["300", "400", "500", "700"],
   variable: "--font-spaceGrotesk",
 });
-import "./globals.css";
+import { ThemeProvider } from "@/components/theme-providers";
 export const metadata: Metadata = {
   title: "DevFlow",
   description:
@@ -28,15 +29,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <ClerkProvider appearance={{
-      elements:{
-        formButtonPrimary:'primary-gradient',
-        footerActionLink: 'primary-gradient hover:text-primary-500'
-      }
-    }}>
+    <ClerkProvider
+      appearance={{
+        elements: {
+          formButtonPrimary: "primary-gradient",
+          footerActionLink: "text-orange-500 hover:text-primary-500 primary-gradient",
+        },
+      }}
+    >
       <html lang="en">
-        <body className={`${inter.variable} ${spaceGrotesk.variable}`} >
-          <main>{children}</main>
+        <body className={`${inter.variable} ${spaceGrotesk.variable}`}>
+          <ThemeProvider defaultTheme="system" enableSystem attribute={"class"}>
+            <main>{children}</main>
+          </ThemeProvider>
         </body>
       </html>
     </ClerkProvider>
