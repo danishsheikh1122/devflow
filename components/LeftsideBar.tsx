@@ -64,7 +64,7 @@ const LeftsideBar = () => {
   const pathname = usePathname();
   const { signOut } = useClerk();
   return (
-    <section className="bg-zinc-100/30 dark:bg-zinc-900   background-light900-dark200 custom-scrollbar sticky left-0 top-0 flex h-screen flex-col justify-between overflow-y-auto border-r p-6 pt-36 shadow-light-300 dark:shadow-none max-sm:hidden lg:w-[266px]">
+    <section className="bg-zinc-100/30 dark:bg-zinc-900   background-light900-dark200 custom-scrollbar sticky left-0 top-0 flex h-screen flex-col justify-between overflow-y-auto border-r p-2 border-none pt-36 shadow-light-300 dark:shadow-none max-sm:hidden lg:w-[266px]">
       <div className="flex-col flex flex-1">
         {sidebarLinks.map((item) => {
           const isActive =
@@ -130,7 +130,7 @@ const LeftsideBar = () => {
               onClick={() => signOut({ redirectUrl: "/" })}
             >
               <LogOut className="h-6 w-6"></LogOut>
-              <span className="max-lg:hidden">
+              <span className="max-lg:hidden ">
                 
               Sign out
               </span>

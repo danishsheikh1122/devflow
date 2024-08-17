@@ -11,8 +11,8 @@ const GlobalSearch = () => {
           className="bg-zinc-200/10 dark:bg-zinc-800 paragraph-regular no-foucs outline-none placeholder text-black dark:text-white border-none shadow-none"
           type="text"
           placeholder="Search Globally"
-          value=""
         />
+
       </div>
     </div>
   );

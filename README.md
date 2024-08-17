@@ -22,3 +22,7 @@
 
 - made fully responsive sidebars
 - foucs on max-sm:hidden and max-lg:hidden
+
+## Added home filters and dropdown filters for mobile
+
+- used bagde cmp and dropdown cmp from shad cn and created links and also used useQueryParams
