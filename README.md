@@ -26,3 +26,7 @@
 ## Added home filters and dropdown filters for mobile
 
 - used bagde cmp and dropdown cmp from shad cn and created links and also used useQueryParams
+
+## Created home page
+
+- created question card and metrices no result cmp and many more
