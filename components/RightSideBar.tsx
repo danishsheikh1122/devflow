@@ -5,38 +5,38 @@ import RenderTag from "./RenderTag";
 
 const hotQuestions = [
   {
-    id: 1,
+    id: '1',
     title: "How do I use express as a custom server in NextJS?",
   },
   {
-    id: 2,
+    id: '2',
     title: "How do I use express as a custom server in NextJS?",
   },
   {
-    id: 3,
+    id: '3',
     title: "How do I use express as a custom server in NextJS?",
   },
   {
-    id: 4,
+    id: '4',
     title: "How do I use express as a custom server in NextJS?",
   },
   {
-    id: 5,
+    id: '5',
     title: "How do I use express as a custom server in NextJS?",
   },
 ];
 
 const popularTags = [
-  { id: 1, name: "javascript", totalQuestions: 5 },
-  { id: 2, name: "python", totalQuestions: 5 },
-  { id: 3, name: "dsa", totalQuestions: 5 },
-  { id: 4, name: "next-js", totalQuestions: 5 },
-  { id: 5, name: "node-js", totalQuestions: 5 },
+  { id: '1', name: "javascript", totalQuestions: 5 },
+  { id: '2', name: "python", totalQuestions: 5 },
+  { id: '3', name: "dsa", totalQuestions: 5 },
+  { id: '4', name: "next-js", totalQuestions: 5 },
+  { id: '5', name: "node-js", totalQuestions: 5 },
 ];
 
 const RightSideBar = () => {
   return (
-    <section className=" bg-zinc-200/30 dark:bg-zinc-900 border-l   background-light900-dark200 custom-scrollbar sticky right-0 top-0 flex h-screen flex-col overflow-y-auto  p-6 pt-36 shadow-light-300 dark:shadow-none max-xl:hidden w-[350px]">
+    <section className=" bg-zinc-100/30 dark:bg-zinc-900 border-l   background-light900-dark200 custom-scrollbar sticky right-0 top-0 flex h-screen flex-col overflow-y-auto  p-6 pt-36 shadow-light-300 dark:shadow-none max-xl:hidden w-[350px]">
       <div>
         <h3 className="h3-bold font-bold text-2xl ">Questions</h3>
         <div className="mt-7 flex w-full flex-col gap-[30px]">
