@@ -17,3 +17,8 @@
 ## Created SideNavBar
 
 - used sheet from shadcn-ui most use ful cmp and added navigations in sheet
+
+## Created left and right sidebar
+
+- made fully responsive sidebars
+- foucs on max-sm:hidden and max-lg:hidden

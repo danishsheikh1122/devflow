@@ -10,6 +10,7 @@ import {
   Tag,
   User,
   CircleHelp,
+  LogOut,
 } from "lucide-react";
 import {
   Sheet,
@@ -22,7 +23,7 @@ import {
 } from "@/components/ui/sheet";
 import Image from "next/image";
 import Link from "next/link";
-import { SignedOut } from "@clerk/nextjs";
+import { SignedIn, SignedOut, useClerk } from "@clerk/nextjs";
 import { usePathname } from "next/navigation";
 interface SidebarLink {
   imgURL: React.ReactNode;
@@ -30,6 +31,8 @@ interface SidebarLink {
   label: string;
 }
 const MobileNav = () => {
+  const { signOut } = useClerk();
+
   const sidebarLinks: SidebarLink[] = [
     {
       imgURL: <Home></Home>,
@@ -92,13 +95,6 @@ const MobileNav = () => {
                       : "text-black dark:text-white"
                   }`}
                 >
-                  {/* <Image
-                    src={item.imgURL}
-                    alt={item.imgURL}
-                    width={20}
-                    height={20}
-                    className={`${isActive ? "dark:invert" : ""} `}
-                  ></Image> */}
                   <span className="h-6 w-6 flex items-center">
                     {item.imgURL}
                   </span>
@@ -164,6 +160,22 @@ const MobileNav = () => {
                 </SheetClose>
               </div>
             </SignedOut>
+            <SignedIn>
+              <div className="mt-12 flex flex-col gap-3">
+                <SheetClose asChild className="px-4">
+                  <Link href="/sign-up" className="w-full h-full">
+                    <Button
+                      variant={"default"}
+                      className="w-full gap-2 rounded-lg dark:bg-slate-800 text-orange-500 bg-slate-200/50 hover:bg-slate-200/40 dark:hover:bg-slate-800/50"
+                      onClick={() => signOut({ redirectUrl: "/" })}
+                    >
+                      <LogOut className="h-6 w-6"></LogOut>
+                      Sign out
+                    </Button>
+                  </Link>
+                </SheetClose>
+              </div>
+            </SignedIn>
           </div>
         </SheetContent>
       </Sheet>

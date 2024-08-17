@@ -1,16 +1,12 @@
-import React from "react";
-import Link from "next/link";
-import Image from "next/image";
-import { ModeToggle } from "../mode-toggle";
 import {
   SignedIn,
-  SignIn,
-  SignInButton,
-  UserButton,
-  useUser,
+  UserButton
 } from "@clerk/nextjs";
-import MobileNav from "../MobileNav";
+import Image from "next/image";
+import Link from "next/link";
 import GlobalSearch from "../GlobalSearch";
+import MobileNav from "../MobileNav";
+import { ModeToggle } from "../mode-toggle";
 const NavBar = () => {
   return (
     <nav className="flex-between fixed z-50 w-full gap-5 p-6 shadow-light-300 dark:shadow-none sm:px-12 bg-zinc-100/30 dark:bg-zinc-900 ">
